@@ -19,13 +19,15 @@ align-content: center;
     padding: 20px;
     background-color: clear;
     border-radius: 30px;
-    text-align: right;
+    text-align: center;
+    position: relative;
+    padding-left: 500px;
 }
 
 #askAnthony {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px;
+    padding: 100px;
     border-radius: 20px;
     grid-column-gap: 10px;
 }
@@ -51,4 +53,16 @@ align-content: center;
     font-size: 40px;
     border-radius: 50px;
     cursor: pointer;
+}
+#footer {
+    height: 50px;
+    background: #666;
+    color: #fff;
+    padding: 20px 0;
+    clear: both;
+    border-top: 8px solid #236d3580;
+    color: #ccc;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 100px;
 }
