@@ -2,7 +2,7 @@ body {
     font: 15px/1.5 Arial, Helvetica, sans-sarif;
     padding: 0;
     margin: 0;
-    background-image: url("https://cache-graphicslib.viator.com/graphicslib/page-images/742x525/406949_KERRY%20PARK,%20SEATTLE.jpg");
+    background-image: url("https://dostuff-assets.s3.amazonaws.com/property_asset/46018/kerry-park.jpg");
     background-repeat: no-repeat;
     background-size: cover;   
 }
@@ -10,59 +10,23 @@ body {
 #about {
 font-size: 20px;
 align-content: center;
+padding: 5px;
 }
 
-#appDescription {
+#app-description {
     display: grid;
-    color: black;
+    color: rgb(122, 104, 139);
     font-size: 30px;
     padding: 20px;
     background-color: clear;
     border-radius: 30px;
     text-align: center;
-    position: relative;
-    padding-left: 500px;
 }
 
-#askAnthony {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 100px;
-    border-radius: 20px;
-    grid-column-gap: 10px;
-}
-
-.askAnthony-child {
-    padding: 10px;
-    color: white;
-    justify-items: center;
-    align-items: center;
+#ask-what-now {
+    float: center;
+    padding: 20px;
     text-align: center;
-    font-size: 30px;
-}
 
-.askAnthony-child {
-    background-color: #236d3580;
-    font-size: 30px;
-    border-radius: 30px;
-}
 
-.askAnthony-child:hover {
-    background-color: whitesmoke;
-    transform: scale(1.25);
-    font-size: 40px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-#footer {
-    height: 50px;
-    background: #666;
-    color: #fff;
-    padding: 20px 0;
-    clear: both;
-    border-top: 8px solid #236d3580;
-    color: #ccc;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 100px;
 }
