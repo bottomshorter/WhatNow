@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 var assistant = new AssistantV2({
   version: '2019-02-28'
 });
-
+var intentholder = "";
 
 // Endpoint to be call from the client side
 app.post('/api/message', function (req, res) {
@@ -66,7 +66,23 @@ app.post('/api/message', function (req, res) {
       const status = (err.code  !== undefined && err.code > 0)? err.code : 500;
       return res.status(status).json(err);
     }
+    //focus on the intents, create if statements that will call AP
+    
+    //THIS IS THE PAYLOAD FROM THE USER
+    // eslint-disable-next-line
+    console.log(payload);
 
+    // eslint-disable-next-line
+    console.log(JSON.stringify(data));
+
+    function pushJSON(){
+      
+    };
+
+
+
+
+    intentholder = data;
     return res.json(data);
   });
 });
@@ -82,5 +98,7 @@ app.get('/api/session', function (req, res) {
     }
   });
 });
+
+
 
 module.exports = app;
