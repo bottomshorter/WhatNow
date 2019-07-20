@@ -15,12 +15,13 @@ padding: 5px;
 
 #app-description {
     display: grid;
-    color: rgb(122, 104, 139);
+    color: Blue (122, 104, 139);
     font-size: 30px;
     padding: 20px;
     background-color: clear;
-    border-radius: 30px;
+    border-radius: 40px;
     text-align: center;
+    
 }
 
 #ask-what-now {
@@ -30,3 +31,9 @@ padding: 5px;
 
 
 }
+
+
+
+
+
+

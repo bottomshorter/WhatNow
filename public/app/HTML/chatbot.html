@@ -9,7 +9,7 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
-    <script src=""></script>
+ 
 </head>
 
 <body>
@@ -20,24 +20,23 @@
                     
                         </div>
             </nav>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="food.html">Food</a></li>
-                    <li><a href="ambiance.html">Ambiance</a></li>
-                    <li><a href="landmark.html">Landmark</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div id="mainDiv">
-        <div class="mainDivChild" id="gameDescription">
-           What do you feel like eating today?
-            <button id="play">Ask Anthony</button>
-        </div>
-
-        </div>
-    </div>
+            
+            <div id="ask-what-now" class="row align-items-center">
+            
+                <iframe 
+                        id="inlineFrameExample"
+                        title="Inline Frame Example"
+                        width="2000"
+                        height="600"
+                        src="https://assistant-chat-us-south.watsonplatform.net/web/public/017fc31f-71e9-40bd-af46-1f3cfd8636ff">
+                </iframe>
+                
+                <!-- <div id="what-now-link">
+                    <a href="https://assistant-chat-us-south.watsonplatform.net/web/public/2def4792-1b85-4719-8e67-2e0ab2a44d17">What Now?</a>
+                </div> -->
+                
+            </div>
+          
 </body>
 
 </html>
