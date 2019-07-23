@@ -20,6 +20,9 @@
 var express = require('express'); // app server
 var bodyParser = require('body-parser'); // parser for post requests
 var AssistantV2 = require('ibm-watson/assistant/v2'); // watson sdk
+var mysql = require('mysql'); //mysql
+var db = require('./sql/whatnow_db'); //DB
+
 
 var app = express();
 
@@ -28,11 +31,9 @@ app.use(express.static('./public')); // load UI from public folder
 app.use(bodyParser.json());
 
 // Create the service wrapper
-
 var assistant = new AssistantV2({
   version: '2019-02-28'
 });
-var intentholder = "";
 
 // Endpoint to be call from the client side
 app.post('/api/message', function (req, res) {
@@ -73,16 +74,11 @@ app.post('/api/message', function (req, res) {
     console.log(payload);
 
     // eslint-disable-next-line
-    console.log(JSON.stringify(data));
+    console.log(JSON.stringify(data, null, 4));
 
-    function pushJSON(){
-      
-    };
+    // INSERT INTO DB 
+    db.Log2SQL(data, payload);
 
-
-
-
-    intentholder = data;
     return res.json(data);
   });
 });

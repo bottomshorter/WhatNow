@@ -9,17 +9,11 @@ CREATE TABLE convMessages
   InputMessageType VARCHAR (255) NULL,
   InputMessageContent VARCHAR (255) NULL,
   ResponseType VARCHAR (55) NULL,
-  ResponseHeader VARCHAR (255),
+  ResponseIntents VARCHAR (255),
   ResponseResults VARCHAR (255),
-  ResponseIntent VARCHAR (55),
-  Confidence INT NULL,
+  Confidence FLOAT NULL,
   PRIMARY KEY (ID)
 );
 
   SELECT *
   FROM convMessages;
-
-  INSERT INTO convMessages
-    (ID, InputMessageType, InputMessageContent, ResponseType, ResponseHeader, ResponseResults, ResponseIntent, Confidence)
-  VALUES
-    (1,2,2,22,2,2,2,2,2);

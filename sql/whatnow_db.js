@@ -14,16 +14,42 @@ var connection = mysql.createConnection({
   database: 'whatnow_db'
 });
 
-connection.connect(function(err) {
+connection.connect(function (err) {
   if (err) throw err;
   // eslint-disable-next-line
   console.log("connected as id " + connection.threadId + "\n");
 });
 
-function messageLog(){
-  console.log("Inserting into SQL...\n");
-  var query = connection.query(
-    "INSERT INTO convMessages(ID, InputMessageType, InputMessageContent, ResponseType, ResponseHeader, ResponseResults, ResponseIntent, Confidence) VALUES ?",
 
-  );
+function Log2SQL(data, payload) {
+  const qstring = `
+  INSERT INTO convMessages 
+  (InputMessageType, 
+  InputMessageContent,
+  ResponseType,
+  ResponseIntents,
+  ResponseResults,
+  Confidence) VALUES (?,?,?,?,?,?);`;
+
+  connection.query({
+    sql: qstring,
+    values: [
+      payload.input.message_type,
+      payload.input.text,
+      data.output.generic[0].response_type,
+      (data.output.intents.length > 0) ? data.output.intents[0].intent : null,
+      data.output.generic[0].text,
+      (data.output.intents.length > 0) ? data.output.intents[0].confidence : null 
+    ]
+  },
+    function (err, res) {
+      if (err) {
+        console.log(err);
+      }
+
+    });
 };
+
+module.exports = {
+  Log2SQL: Log2SQL
+}
